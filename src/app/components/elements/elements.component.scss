@@ -1,0 +1,58 @@
+.item {
+  &:nth-child(2) {
+    grid-column: 18;
+  }
+  &:nth-child(5), &:nth-child(13) {
+    grid-column: 13
+  }
+  &:nth-child(57) {
+    grid-column: 4;
+  }
+}
+.element {
+  display: flex;
+  // width: 80px;
+  // height: 70px;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #000;
+  padding: 2px;
+  font-size: .8em;
+  color: #fff;
+  &.nonmetal {
+    border-color: #00ff00;
+  }
+  &.metal {
+    border-color: #336600;
+  }
+  &.alkali {
+    border-color: #ff9933;
+  }
+  &.alkaline {
+    border-color: #ffff66;
+  }
+  &.transition {
+    border-color: #990000;
+  }
+  &.metalloid {
+    border-color: #339933;
+  }
+  &.halogen {
+    border-color: #00ffff;
+  }
+  &.noble {
+    border-color: #0066ff;
+  }
+  &.lanthanoid {
+    border-color: #ff9966;
+  }
+  &.actinoid {
+    border-color: #8f246b;
+  }
+  .numeral {
+    align-self: flex-start;
+  }
+  .symbol {
+    font-weight: bold;
+  }
+}
