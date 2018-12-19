@@ -1,3 +1,7 @@
+@mixin change-border-color($color) {
+  border-color: $color;
+}
+
 .white-row {
   grid-column: span 18;
 }
@@ -13,17 +17,8 @@
   }
 }
 
-
-
-// &:nth-child(15){
-//   grid-row: 10;
-//   grid-column: 4;
-// }
-
 .element {
   display: flex;
-  // width: 80px;
-  // height: 70px;
   flex-direction: column;
   align-items: center;
   border: 2px solid #000;
@@ -31,34 +26,34 @@
   font-size: .8em;
   color: #fff;
   &.nonmetal {
-    border-color: #00ff00;
+    @include change-border-color(#00ff00);
   }
   &.metal {
-    border-color: #336600;
+    @include change-border-color(#336600);
   }
   &.alkali {
-    border-color: #ff9933;
+    @include change-border-color(#ff9933);
   }
   &.alkaline {
-    border-color: #ffff66;
+    @include change-border-color(#ffff66);
   }
   &.transition {
-    border-color: #990000;
+    @include change-border-color(#990000);
   }
   &.metalloid {
-    border-color: #339933;
+    @include change-border-color(#339933);
   }
   &.halogen {
-    border-color: #00ffff;
+    @include change-border-color(#00ffff);
   }
   &.noble {
-    border-color: #0066ff;
+    @include change-border-color(#0066ff);
   }
   &.lanthanoid {
-    border-color: #ff9966;
+    @include change-border-color(#ff9966);
   }
   &.actinoid {
-    border-color: #8f246b;
+    @include change-border-color(#8f246b);
   }
   .numeral {
     align-self: flex-start;
