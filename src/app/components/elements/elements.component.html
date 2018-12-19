@@ -6,3 +6,12 @@
     <span class="mass">{{ element.atomicMass }}</span>
   </div>
 </div>
+<div class="white-row"></div>
+<div class="item" *ngFor="let element of otherElement">
+  <div class="element" [ngClass]="element.groupBlock" *ngIf="element.name">
+    <span class="numeral">{{ element.atomicNumber }}</span>
+    <span class="symbol">{{ element.symbol }}</span>
+    <span class="name">{{ element.name }}</span>
+    <span class="mass">{{ element.atomicMass }}</span>
+  </div>
+</div>

@@ -14,11 +14,15 @@ export class ElementsComponent implements OnInit {
 
   title = 'periodic-table';
   elements = [];
+  otherElement = [];
 
   ngOnInit() {
     this.elementsService.getAll()
     .subscribe((data: any[]) => {
-      this.elements = data.copyWithin(0, 0, 102);
+      this.elements = [...data];
+      this.otherElement = [...data];
+      this.otherElement.splice(0, 88);
+      this.elements.splice(88, 30);
       console.log(data);
     });
   }
